@@ -3,7 +3,6 @@
 Created on Wed Jul 31 09:35:00 2019
 
 @author: Tom Balcombe
-Battleships lite
 """
 
 # The game prerequisites
@@ -35,11 +34,11 @@ player3 = battleShip()
 
 #All the lists / maps are here:
 xlist = []
-ylist = [] 
+ylist = []
 zlist = []
 
 x1list = []
-y1list = [] 
+y1list = []
 
 yourxlist = []
 yourylist = []
@@ -85,7 +84,7 @@ def initiateGame2():
         initiateGame2()
     x1list.append(player.coord1)
     y1list.append(player.coord2)
-    initiatePlayerMap(player.coord1,player.coord2)  
+    initiatePlayerMap(player.coord1,player.coord2)
     drawPlayerMap()
     initiateGame3()
 
@@ -110,10 +109,10 @@ def initiateGame3():
     if player2.coord2 > 5 or player2.coord2 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
         initiateGame3()
-    checkplayerNumbers1(player2.coord1,player2.coord2)  
+    checkplayerNumbers1(player2.coord1,player2.coord2)
     x1list.append(player2.coord1)
     y1list.append(player2.coord2)
-    initiatePlayerMap(player2.coord1,player2.coord2)  
+    initiatePlayerMap(player2.coord1,player2.coord2)
     drawPlayerMap()
     initiateGame4()
 
@@ -125,12 +124,12 @@ def initiateGame4():
     else:
       print("Type in numbers only.")
       initiateGame4()
-    playeryAAA = input("Enter your third and final ship co-ordinate 2: ") 
+    playeryAAA = input("Enter your third and final ship co-ordinate 2: ")
     if playeryAAA.isdigit():
       player3.coord2 = int(playeryAAA)
     else:
       print("Type in numbers only.")
-      initiateGame4() 
+      initiateGame4()
 #If the player types in coords which are outside the 5x5 grid, we ask them to try again.
     if player3.coord1 > 5 or player3.coord1 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
@@ -138,10 +137,10 @@ def initiateGame4():
     if player3.coord2 > 5 or player3.coord2 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
         initiateGame4()
-    checkplayerNumbers2(player3.coord1,player3.coord2)    
+    checkplayerNumbers2(player3.coord1,player3.coord2)
     x1list.append(player3.coord1)
-    y1list.append(player3.coord2)    
-    initiatePlayerMap(player3.coord1,player3.coord2)  
+    y1list.append(player3.coord2)
+    initiatePlayerMap(player3.coord1,player3.coord2)
     drawPlayerMap()
     playGame()
 
@@ -152,7 +151,6 @@ def playGame():
     print("'9' is where shot has been fired.")
     print("So far you have used these coordinates:")
     drawPlayMap()
-    yourzlist = list(zip(yourxlist,yourylist))
     xxA = input("Guess coordinate 1:" )
     if xxA.isdigit():
       xx = int(xxA)
@@ -184,7 +182,7 @@ def enemyThinks():
     time.sleep(1)
 #We'll check to see if the computer has already used those numbers.
     checkNumbers(x,y)
-    
+
 #Lets check to see if the computer has already tried those coords before.
 def checkNumbers(x,y):
     countx = 0
@@ -267,7 +265,7 @@ def initiatePlayMap(x,y):
                 xindex = xindex+1
                 if xindex == x:
                     i[xindex] = 9
-                               
+
 def initiateComputerMap(x,y):
     xindex = 0
     yindex = 0
@@ -289,10 +287,10 @@ def playPlayerMap(x,y):
                 xindex = xindex+1
                 if xindex == x:
                     if i[xindex] == 8:
-                      print("Once of your ships was destroyed!!")
+                      print("One of your ships was destroyed!")
                       time.sleep(2)
                       i[xindex] = 9
-                    i[xindex] = 7             
+                    i[xindex] = 7
     drawPlayerMap()
 
 def playComputerMap(x,y):
@@ -308,7 +306,7 @@ def playComputerMap(x,y):
                       print("You sunk an enemy ship!")
                       time.sleep(2)
                       i[xindex] = 5
-                    i[xindex] = 7            
+                    i[xindex] = 7
 
 def verifyPlayerMap():
     yindex = 0
@@ -319,7 +317,7 @@ def verifyPlayerMap():
                 playGame()
     print("The computer has sunk all your ships. Better luck next time!")
     time.sleep(2)
-    exit()   
+    exit()
 
 def verifyComputerMap():
     yindex = 0
@@ -329,7 +327,7 @@ def verifyComputerMap():
             if a == 6:
                 print("There are still more enemy ships. Keep firing!")
                 enemyThinks()
-    print("You blew up all the computer ships. Good game.")           
+    print("You blew up all the computer ships. Good game.")
     time.sleep(2)
     exit()
 
