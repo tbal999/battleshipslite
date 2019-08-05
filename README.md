@@ -5,7 +5,5 @@ This project helped me with learning:
 
 lists,
 matrices,
-for loops,
-if and else,
-
-Enoy the game!
+for & while loops,
+if and else statements
