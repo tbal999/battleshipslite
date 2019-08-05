@@ -148,8 +148,7 @@ def initiateGame4():
 def playGame():
     time.sleep(1)
     print("Try and sink the enemy battleships!")
-    print("'9' is where shot has been fired.")
-    print("So far you have used these coordinates:")
+    print("'9' is where your shots have landed on map below.")
     drawPlayMap()
     xxA = input("Guess coordinate 1:" )
     if xxA.isdigit():
@@ -199,8 +198,9 @@ def checkNumbers(x,y):
                             return
                         if i != y:
                             break
-    print("Computer hasn't tried:",x,y,".")
+    print("Computer hasn't tried these coords yet:",x,y,".")
     print("Computer fires cannons!")
+    time.sleep(1)
     enemyTries(x,y)
     return()
 
@@ -241,6 +241,7 @@ def checkplayerNumbers2(x,y):
 #The computer will now attempt to blow up your ship.
 def enemyTries(x,y):
     playPlayerMap(x,y)
+    print("Your ships are number '8' and '7' are where shots landed.")
     verifyPlayerMap()
 #If it misses, it's your turn again.
 
@@ -296,6 +297,8 @@ def playPlayerMap(x,y):
 def playComputerMap(x,y):
     xindex = 0
     yindex = 0
+    print("Fire!")
+    time.sleep(1)
     for i in computerMap[yindex:]:
         yindex = yindex+1
         if yindex == y+1:
@@ -307,6 +310,7 @@ def playComputerMap(x,y):
                       time.sleep(2)
                       i[xindex] = 5
                     i[xindex] = 7
+                    print("Shot missed!")
 
 def verifyPlayerMap():
     yindex = 0
