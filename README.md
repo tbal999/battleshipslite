@@ -6,12 +6,14 @@ A simple version of battleships, where:
 - the computer has three ships
 - it's a 5x5 map that looks something like this:
 
-0 1 2 3 4 5
-1 0 0 0 0 0
-2 0 0 0 0 0
-3 0 0 0 0 0
-4 0 0 0 0 0
-5 0 0 0 0 0
+[0 1 2 3 4 5]
+[1 0 0 0 0 0]
+[2 0 0 0 0 0]
+[3 0 0 0 0 0]
+[4 0 0 0 0 0]
+[5 0 0 0 0 0]
+
+...except it's a grid.
 
 This project helped me with learning:
 
