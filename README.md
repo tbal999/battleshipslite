@@ -14,10 +14,3 @@ A simple version of battleships, where:
 [5 0 0 0 0 0]
 
 ...except it's a grid.
-
-This project helped me with learning:
-
-lists,
-matrices,
-for & while loops,
-if and else statements
