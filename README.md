@@ -1,5 +1,5 @@
 # battleshipslite
-A simple version of battleships, where:
+A simpler version of battleships, where:
 
 - all the "ships" are 1x1
 - you have three ships
