@@ -14,4 +14,4 @@ A simpler version of battleships, where:
 [5, 0, 0, 0, 0, 0]
 
 ---
-You first are given the opportunity to type in the three co-ordinates for your ships.
+You first are given the opportunity to type in the three co-ordinates for your ships.x
