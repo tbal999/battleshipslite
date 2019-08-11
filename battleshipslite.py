@@ -353,4 +353,5 @@ def drawPlayMap():
         print(i)
     print("-- SHOTS TAKEN --")
 
+#This starts the initiateGame function - thus starts the game!
 initiateGame()
