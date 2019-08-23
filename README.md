@@ -35,8 +35,8 @@ If you hit, it will say "You have sunk a ship!"
 
 3) The computer will then pick coordinates.
 Then the computer will check to see whether it's already tried those coordinates before, and if not, it will fire.
-It will let you know if it sink one of your ships.
+It will let you know if it sinks one of your ships.
 
-Then it starts all over again.
+Repeat.
 Whoever hits and sinks all three ships wins.
 
