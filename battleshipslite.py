@@ -5,7 +5,6 @@ Created on Wed Jul 31 09:35:00 2019
 @author: Tom Balcombe
 """
 
-# The game prerequisites
 import random
 import time
 
